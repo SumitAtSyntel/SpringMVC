@@ -10,7 +10,7 @@
 
 <h1>Welcome</h1>
 <form action="/add" method="get">
-Input 1 <input type="text" id="input1" name="input1">
+Input 1<input type="text" id="input1" name="input1">
 Input 2<input type="text" id="input2" name="input2">
 <input type="submit" >
 </form>
