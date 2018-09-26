@@ -9,38 +9,21 @@
 <body>
 
 <h1>Welcome</h1>
-<form action="/add" method="get">
+<form action="add" method="get">
 Input 1<input type="text" id="input1" name="input1">
 Input 2<input type="text" id="input2" name="input2">
 <input type="submit" >
 </form>
+
+</br>
     
     
-    <form action="validateLogin" method="get" id ="loginForm" name="loginForm">
-Id<input type="text" id="id" name="id">
-Password<input type="password" id="password" name="password">
-<button>Sub</button>
-</form>
+<!--  <form action="validateLogin" method="get" id ="loginForm" name="loginForm">
+	Id<input type="text" id="id" name="id">
+	Password<input type="password" id="password" name="password">
+	<button>Sub</button>
+</form> -->
     
-    @RequestMapping(value = "/validateLogin", method = RequestMethod.GET)
-	public ModelAndView loginInto(HttpServletRequest request, HttpServletResponse response) {
-		boolean isUser=false;
-		ModelAndView mav=null;
-		
-		try {
-			isUser=loginDao.checkUser(request.getParameter("id"),request.getParameter("password"));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if(isUser)
-		 mav = new ModelAndView("welcome");
-		//mav.addObject("login", new Login());
-		else
-			mav = new ModelAndView("login");	
-		System.out.println(message);
-		return mav;
-	}
 
 </body>
 </html>

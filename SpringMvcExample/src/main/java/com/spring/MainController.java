@@ -39,4 +39,25 @@ public class MainController {
 		return model;
 		
 	}
+	
+
+    @RequestMapping(value = "/validateLogin", method = RequestMethod.GET)
+	public ModelAndView loginInto(HttpServletRequest request, HttpServletResponse response) {
+		boolean isUser=false;
+		ModelAndView mav=null;
+		
+		/*try {
+			isUser=loginDao.checkUser(request.getParameter("id"),request.getParameter("password"));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		if(isUser)
+		 mav = new ModelAndView("welcome");
+		//mav.addObject("login", new Login());
+		else
+			mav = new ModelAndView("login");	
+		System.out.println("test");
+		return mav;
+	}
 }
