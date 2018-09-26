@@ -18,11 +18,7 @@ Input 2<input type="text" id="input2" name="input2">
 </br>
     
     
-<!--  <form action="validateLogin" method="get" id ="loginForm" name="loginForm">
-	Id<input type="text" id="id" name="id">
-	Password<input type="password" id="password" name="password">
-	<button>Sub</button>
-</form> -->
+<!--   -->
     
 
 </body>
