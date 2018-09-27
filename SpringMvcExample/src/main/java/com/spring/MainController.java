@@ -45,6 +45,7 @@ public class MainController {
 	public ModelAndView loginInto(HttpServletRequest request, HttpServletResponse response) {
 		boolean isUser=false;
 		ModelAndView mav=null;
+		String Message="Invalid userId or Password";
 		
 		/*try {
 			isUser=loginDao.checkUser(request.getParameter("id"),request.getParameter("password"));
@@ -57,6 +58,7 @@ public class MainController {
 		//mav.addObject("login", new Login());
 		else
 			mav = new ModelAndView("login");	
+			mav.addObject(message, message);
 		System.out.println("test");
 		return mav;
 	}
